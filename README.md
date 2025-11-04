@@ -1,75 +1,125 @@
-# Nuxt Minimal Starter
+# 🧠 Restaurant Analytics Dashboard — Nuxt 3
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Painel de Analytics para restaurantes desenvolvido com **Nuxt 3**, exibindo métricas como vendas por dia, ticket médio, produtos mais vendidos e desempenho por canal (iFood, WhatsApp, Local, etc).  
+O projeto usa **PostgreSQL** com APIs criadas no **server do Nuxt**, e gráficos com **Chart.js**.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 🚀 Tecnologias Utilizadas
+
+### Frontend
+- Nuxt 3 (Vue 3)
+- Composition API & Composables
+- TailwindCSS
+- Flowbite UI
+- Chart.js
+
+### Backend / Integrações
+- Server routes do Nuxt
+- PostgreSQL usando `pg`
+- SQL puro
+
+### Ferramentas & Infra
+- pnpm (gerenciador de pacotes)
+- Docker (banco PostgreSQL opcional)
+
+---
+
+## 📊 Funcionalidades
+
+- Gráficos de vendas e ticket médio (Chart.js)
+- Filtros por período (7, 30, 90 dias e custom)
+- Filtro por canal de vendas (iFood, Local, WhatsApp)
+- Dashboard com dados financeiros:
+  - Total vendido
+  - Total de pedidos
+  - Ticket médio
+- API organizada em `/server/api`
+- Composables para chamadas e lógica reutilizável
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+project/
+│── server/
+│   └── api/           # APIs e queries SQL
+│── composables/       # Funções reutilizáveis
+│── components/        # Componentes UI
+│── pages/dashboard/   # Páginas de dashboards
+│── assets/
+```
+
+---
+
+## 🛠️ Instalação
+
+### Requisitos
+- Node 18+
+- pnpm
+- PostgreSQL
+
+### Instalar dependências
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Instalar PostgreSQL Client
 
 ```bash
-# npm
-npm run dev
+pnpm install pg
+```
 
-# pnpm
+---
+
+## 🐘 Configuração do Banco
+
+Crie um arquivo `.env` com:
+
+```env
+DATABASE_URL=postgres://usuario:senha@localhost:5432/nomedobanco
+```
+
+Para usar PostgreSQL via Docker:
+
+```bash
+docker run --name pg-nuxt -e POSTGRES_PASSWORD=123 -p 5432:5432 -d postgres
+```
+
+---
+
+## ▶️ Rodar o Projeto
+
+```bash
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+Build para produção:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+Pré-visualizar:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## ✅ Status do Projeto
+
+Este projeto é funcional e pode ser expandido com:
+- Autenticação
+- Multi-lojas
+- Exportação CSV
+- Mais KPIs e dashboards
+
+---
+
+## 📜 Licença
+
+Código livre para estudo e uso pessoal.
