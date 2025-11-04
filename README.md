@@ -93,7 +93,7 @@ docker run --name pg-nuxt -e POSTGRES_PASSWORD=123 -p 5432:5432 -d postgres
 ## ▶️ Rodar o Projeto
 
 ```bash
-pnpm dev
+pnpm run dev
 ```
 
 Build para produção:
@@ -110,16 +110,3 @@ pnpm preview
 
 ---
 
-## ✅ Status do Projeto
-
-Este projeto é funcional e pode ser expandido com:
-- Autenticação
-- Multi-lojas
-- Exportação CSV
-- Mais KPIs e dashboards
-
----
-
-## 📜 Licença
-
-Código livre para estudo e uso pessoal.
